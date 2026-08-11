@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="随机组合主语、谓语和宾语，发现意外的句子。" />
+    <title>随机造句</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="site-header">
+        <a class="wordmark" href="#top">随机造句</a>
+        <p id="counter">第 001 次组合</p>
+      </header>
+
+      <section class="generator" id="top">
+        <div class="intro">
+          <p class="eyebrow">SENTENCE GENERATOR</p>
+          <h1>把普通的词，<br />拼成意外的句子。</h1>
+          <p class="description">随机选择主语、谓语和宾语。锁住喜欢的部分，再继续尝试。</p>
+        </div>
+
+        <div class="sentence-panel" aria-live="polite">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p class="sentence" id="sentence">清晨的邮差悄悄收藏了一场蓝色的雨。</p>
+          <div class="sentence-actions">
+            <button class="primary" id="generate" type="button">重新生成 <span aria-hidden="true">↗</span></button>
+            <button class="secondary" id="copy" type="button">复制句子</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="parts" aria-label="句子组成">
+        <article class="part-card" data-part="subject">
+          <div class="part-meta"><span>01</span><span>主语</span></div>
+          <button class="part-word" type="button" aria-label="单独更换主语">清晨的邮差</button>
+          <button class="lock" type="button" aria-pressed="false"><span class="lock-icon">○</span><span>锁定</span></button>
+        </article>
+        <article class="part-card" data-part="verb">
+          <div class="part-meta"><span>02</span><span>谓语</span></div>
+          <button class="part-word" type="button" aria-label="单独更换谓语">悄悄收藏了</button>
+          <button class="lock" type="button" aria-pressed="false"><span class="lock-icon">○</span><span>锁定</span></button>
+        </article>
+        <article class="part-card" data-part="object">
+          <div class="part-meta"><span>03</span><span>宾语</span></div>
+          <button class="part-word" type="button" aria-label="单独更换宾语">一场蓝色的雨</button>
+          <button class="lock" type="button" aria-pressed="false"><span class="lock-icon">○</span><span>锁定</span></button>
+        </article>
+      </section>
+
+      <footer><p>点击词语可单独更换</p><p>主语 × 谓语 × 宾语 = 1,000 种可能</p></footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
